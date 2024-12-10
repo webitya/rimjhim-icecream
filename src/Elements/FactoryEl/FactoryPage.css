@@ -1,0 +1,13 @@
+.hero-section {
+    background: linear-gradient(to bottom, #fde4e4, #fffacc);
+  }
+  
+  .steps-horizontal .ant-steps-item-icon {
+    background-color: #d63e2c;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  

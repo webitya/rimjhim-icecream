@@ -1,0 +1,50 @@
+.about-container {
+  position: relative;
+}
+
+.circle-background {
+  position: absolute;
+  width: 400px; /* Adjust size as needed */
+  height: 400px; /* Adjust size as needed */
+  border-radius: 50%;
+  background: rgba(255, 192, 203, 0.5); /* Light pink with transparency */
+  top: -50px; /* Position above the carousel */
+  left: -50px; /* Adjust as needed */
+  z-index: 0; /* Send to back */
+}
+.about-image {
+  width: 300px; /* Set a specific width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fills its container */
+}
+
+.carousel-slide {
+  display: flex;
+  background-color: rgba(240, 248, 255, 0) !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes full height */
+}
+
+.about-image {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circle-background {
+    width: 300px; /* Smaller circle for mobile */
+    height: 300px;
+    top: -50px; /* Adjust as needed */
+    left: -50px; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 576px) {
+  .circle-background {
+    width: 200px; /* Even smaller for very small devices */
+    height: 200px;
+    top: -25px; /* Adjust as needed */
+    left: -25px; /* Adjust as needed */
+  }
+}

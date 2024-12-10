@@ -1,0 +1,136 @@
+/* Define Color Palette for Easy Customization */
+:root {
+  --primary-color: #DF0985;
+  --secondary-color: #1EBED6;
+  --background-color: #f0f0f0;
+  --transition-speed: 1s;
+}
+
+/* Container Styling */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+  overflow: hidden; /* Prevents overflow from animations */
+}
+
+/* Sticky Images */
+.sticky-image {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 2; /* Appears above the content */
+  height: 25vh;
+}
+
+/* Main Content Styling */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  padding: 0 20px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Left Section */
+.left-section h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.left-section h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+/* Right Section */
+.right-section {
+  position: relative;
+  width: 50%;
+  max-width: 400px;
+  height: 400px;
+}
+
+/* Product Image Styles */
+.product-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all var(--transition-speed) ease-in-out;
+  z-index: 1;
+}
+
+/* Animation Classes */
+.animate-from-top {
+  transform: translateY(-100%);
+  animation: slide-in-from-top var(--transition-speed) forwards;
+}
+
+.animate-from-bottom {
+  transform: translateY(100%);
+  animation: slide-in-from-bottom var(--transition-speed) forwards;
+}
+
+.animate-from-left {
+  transform: translateX(-100%);
+  animation: slide-in-from-left var(--transition-speed) forwards;
+}
+
+.animate-from-right {
+  transform: translateX(100%);
+  animation: slide-in-from-right var(--transition-speed) forwards;
+}
+
+/* Keyframe Animations */
+@keyframes slide-in-from-top {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-from-left {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-from-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-section {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+
+  .left-section h1 {
+    font-size: 3rem;
+  }
+
+  .left-section h2 {
+    font-size: 2rem;
+  }
+}

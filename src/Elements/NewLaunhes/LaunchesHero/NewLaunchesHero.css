@@ -1,0 +1,68 @@
+/* NewLaunchesHero.css */
+
+.new-launches-hero {
+    position: relative;
+    background-color: #e0f7fa; /* Soft blue background */
+  }
+  
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 0;
+  }
+  
+  .bubble1 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 15%;
+    animation: float 6s infinite ease-in-out;
+  }
+  
+  .bubble2 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 20%;
+    animation: float 8s infinite ease-in-out;
+  }
+  
+  .bubble3 {
+    width: 200px;
+    height: 200px;
+    bottom: 30%;
+    left: 30%;
+    animation: float 10s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .learn-more-btn {
+    background-color: #007acc;
+    border-color: #007acc;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #005fa3;
+    border-color: #005fa3;
+  }
+  
+  /* Ensure bubbles do not interfere with content */
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
